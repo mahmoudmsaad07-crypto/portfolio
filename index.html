@@ -6,6 +6,10 @@
   <title>Mahmoud Saad — Marketing Creative & Brand Strategist</title>
   <meta name="description" content="Portfolio of Mahmoud Saad — Marketing Creative, Brand Strategist, Campaign Specialist, Content Creator & Visual Storyteller.">
   
+  <!-- Preload critical images -->
+  <link rel="preload" as="image" href="logo_avatar.webp" type="image/webp">
+  <link rel="preload" as="image" href="logo.webp" type="image/webp">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +27,7 @@
   <div id="ld" class="preloader" aria-hidden="true">
     <div class="ld-wrap">
       <div class="ld-badge" style="background: none; padding: 0; overflow: hidden; border: 2px solid var(--lime); width: 80px; height: 80px; border-radius: 50%;">
-        <img src="logo.jpg" alt="Mahmoud Saad Logo" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+        <img src="logo_avatar.webp" alt="Mahmoud Saad Logo" fetchpriority="high" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
       </div>
       <div class="ld-letters" dir="ltr" aria-label="MAHMOUD SAAD">
         <span>M</span><span>A</span><span>H</span><span>M</span><span>O</span><span>U</span><span>D</span>
@@ -39,7 +43,7 @@
     <div class="nav-container">
       <a href="#about" class="brand-logo" aria-label="Mahmoud Saad Home">
         <span class="brand-avatar" style="padding: 0; overflow: hidden; border: 1.5px solid var(--lime);">
-          <img src="logo.jpg" alt="Logo" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="logo_avatar.webp" alt="Logo" style="width: 100%; height: 100%; object-fit: cover;">
         </span>
         <span class="brand-text" dir="ltr">MAHMOUD<span class="brand-dot">.</span></span>
       </a>
@@ -99,7 +103,7 @@
         <div class="hero-visual">
           <div class="arch-frame" style="background: #000; border: 3px solid var(--navy);">
             <div class="arch-inner" style="background: none; padding: 0;">
-              <img src="logo.jpg" alt="Mahmoud Saad — Marketing Creative" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.5s ease;">
+              <img src="logo.webp" alt="Mahmoud Saad — Marketing Creative" fetchpriority="high" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.5s ease;">
             </div>
           </div>
 
