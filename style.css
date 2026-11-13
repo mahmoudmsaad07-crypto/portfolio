@@ -981,6 +981,7 @@ html[dir="rtl"] .work-counter-wrap {
   padding: 24px 0 36px;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge */
+  direction: ltr !important;
 }
 
 .rail::-webkit-scrollbar {
@@ -996,6 +997,7 @@ html[dir="rtl"] .work-counter-wrap {
   display: flex;
   gap: 24px;
   width: max-content;
+  direction: ltr !important;
 }
 
 .card {

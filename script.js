@@ -304,10 +304,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const visible = this.getVisibleCards();
       if (!visible.length) return;
       const cardWidth = visible[0].offsetWidth + 24;
-      const isRtl = document.documentElement.dir === 'rtl';
-      const dirMultiplier = isRtl ? -direction : direction;
 
-      this.currentIndex = Math.max(0, Math.min(this.currentIndex + dirMultiplier, visible.length - 1));
+      this.currentIndex = Math.max(0, Math.min(this.currentIndex + direction, visible.length - 1));
       this.rail.scrollTo({
         left: this.currentIndex * cardWidth,
         behavior: 'smooth'
