@@ -411,7 +411,105 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // =========================================================================
-  // 8. SMOOTH SCROLLING
+  // 8. ANIMATED COUNTER ON SCROLL
+  // =========================================================================
+  const statNumbers = document.querySelectorAll('.stat-num[data-target]');
+  let counterStarted = false;
+
+  function animateCounters() {
+    if (counterStarted) return;
+    counterStarted = true;
+
+    statNumbers.forEach(stat => {
+      const target = +stat.getAttribute('data-target');
+      const suffix = stat.getAttribute('data-suffix') || '+';
+      let current = 0;
+      const increment = Math.ceil(target / 40);
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        stat.textContent = `${current}${suffix}`;
+      }, 35);
+    });
+  }
+
+  const statsSection = document.querySelector('.hero-stats');
+  if (statsSection) {
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    statsObserver.observe(statsSection);
+  }
+
+  // =========================================================================
+  // 9. CASE STUDY MODAL INTERACTION
+  // =========================================================================
+  const caseModal = document.getElementById('case-modal');
+  const modalClose = document.getElementById('modal-close');
+  const modalBackdrop = document.getElementById('modal-backdrop');
+  const modalCat = document.getElementById('modal-cat');
+  const modalTitle = document.getElementById('modal-title');
+  const modalResult = document.getElementById('modal-result');
+
+  function openCaseStudy(card) {
+    if (!caseModal) return;
+    const cat = card.querySelector('.card-cat')?.textContent || 'CAMPAIGN';
+    const isAr = currentLang === 'ar';
+    const title = (isAr ? card.getAttribute('data-title-ar') : card.getAttribute('data-title-en')) || card.querySelector('.card-title')?.textContent;
+    const result = card.querySelector('.card-result')?.textContent || 'High ROI';
+
+    if (modalCat) modalCat.textContent = cat;
+    if (modalTitle) modalTitle.textContent = title;
+    if (modalResult) modalResult.textContent = result;
+
+    caseModal.classList.add('open');
+    caseModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCaseStudy() {
+    if (!caseModal) return;
+    caseModal.classList.remove('open');
+    caseModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.card').forEach(card => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', () => openCaseStudy(card));
+  });
+
+  if (modalClose) modalClose.addEventListener('click', closeCaseStudy);
+  if (modalBackdrop) modalBackdrop.addEventListener('click', closeCaseStudy);
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeCaseStudy();
+  });
+
+  // =========================================================================
+  // 10. FAQ ACCORDION INTERACTION
+  // =========================================================================
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    if (question) {
+      question.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        faqItems.forEach(f => f.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    }
+  });
+
+  // =========================================================================
+  // 11. SMOOTH SCROLLING
   // =========================================================================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
