@@ -182,13 +182,15 @@ body.loaded .preloader {
 
 .ld-letters {
   font-family: var(--h);
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
   font-weight: 800;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   display: flex;
   gap: 4px;
   justify-content: center;
   align-items: center;
+  direction: ltr !important;
+  unicode-bidi: isolate;
 }
 
 .ld-letters span {

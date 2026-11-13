@@ -8,25 +8,21 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // =========================================================================
-  // 1. PRELOADER
+  // 1. PRELOADER (FAST & RESPONSIVE)
   // =========================================================================
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      document.body.classList.add('loaded');
-      const ld = document.getElementById('ld');
-      if (ld) {
-        ld.addEventListener('transitionend', () => {
-          ld.style.display = 'none';
-        }, { once: true });
-      }
-    }, 1200);
-  });
-
-  if (document.readyState === 'complete') {
+  function hidePreloader() {
     document.body.classList.add('loaded');
     const ld = document.getElementById('ld');
-    if (ld) ld.style.display = 'none';
+    if (ld) {
+      setTimeout(() => {
+        ld.style.display = 'none';
+      }, 400);
+    }
   }
+
+  // Dismiss quickly on load or fallback after 600ms
+  window.addEventListener('load', hidePreloader);
+  setTimeout(hidePreloader, 700);
 
 
   // =========================================================================
