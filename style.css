@@ -598,12 +598,27 @@ body.loaded .preloader {
 
 .hand-note {
   position: absolute;
-  bottom: -32px;
-  left: 30px;
+  bottom: 0px;
+  left: 20px;
   font-family: var(--hand);
   font-size: 1.6rem;
   color: var(--navy);
   transform: rotate(-4deg);
+  z-index: 12;
+  background: rgba(247, 243, 231, 0.85);
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .hero-visual {
+    max-width: 320px;
+  }
+  .sticker-1 { left: -8px; top: 20px; font-size: 0.65rem; }
+  .sticker-2 { right: -10px; top: 100px; font-size: 0.65rem; }
+  .sticker-3 { left: -10px; bottom: 60px; font-size: 0.65rem; }
+  .sticker-4 { right: -6px; bottom: 15px; font-size: 0.65rem; }
+  .spin-badge-wrap { display: none !important; }
 }
 
 /* Right Column: Hero Content */

@@ -75,7 +75,42 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   const langToggleBtn = document.getElementById('lang-toggle');
   const langLabel = langToggleBtn ? langToggleBtn.querySelector('.lang-label') : null;
+  const mqTrack = document.getElementById('mq-track');
   let currentLang = localStorage.getItem('mahmoud_portfolio_lang') || 'en';
+
+  const arMarqueeContent = `
+    <span>استراتيجيات سوشيال ميديا ✦</span>
+    <span>إعلانات ممولة عالية التحويل ✦</span>
+    <span>إنتاج ريلز وفيديوهات قصيرة ✦</span>
+    <span>بناء الهوية البصرية وتصميم العبوات ✦</span>
+    <span>تصوير تجاري احترافي ✦</span>
+    <span>نمو ومبيعات سريعة ✦</span>
+    <span>إدارة حملات متكاملة ✦</span>
+    <span>استراتيجيات سوشيال ميديا ✦</span>
+    <span>إعلانات ممولة عالية التحويل ✦</span>
+    <span>إنتاج ريلز وفيديوهات قصيرة ✦</span>
+    <span>بناء الهوية البصرية وتصميم العبوات ✦</span>
+    <span>تصوير تجاري احترافي ✦</span>
+    <span>نمو ومبيعات سريعة ✦</span>
+    <span>إدارة حملات متكاملة ✦</span>
+  `;
+
+  const enMarqueeContent = `
+    <span>SOCIAL MEDIA STRATEGY ✦</span>
+    <span>HIGH-CONVERTING ADS ✦</span>
+    <span>REELS & SHORT-FORM VIDEO ✦</span>
+    <span>BRAND IDENTITY & PACKAGING ✦</span>
+    <span>COMMERCIAL PHOTOGRAPHY ✦</span>
+    <span>GROWTH HACKING ✦</span>
+    <span>CAMPAIGN MANAGEMENT ✦</span>
+    <span>SOCIAL MEDIA STRATEGY ✦</span>
+    <span>HIGH-CONVERTING ADS ✦</span>
+    <span>REELS & SHORT-FORM VIDEO ✦</span>
+    <span>BRAND IDENTITY & PACKAGING ✦</span>
+    <span>COMMERCIAL PHOTOGRAPHY ✦</span>
+    <span>GROWTH HACKING ✦</span>
+    <span>CAMPAIGN MANAGEMENT ✦</span>
+  `;
 
   function applyLanguage(lang) {
     currentLang = lang;
@@ -87,6 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (langLabel) {
       langLabel.textContent = isAr ? 'English' : 'عربي';
+    }
+
+    if (mqTrack) {
+      mqTrack.innerHTML = isAr ? arMarqueeContent : enMarqueeContent;
     }
 
     const translatableElements = document.querySelectorAll('[data-en][data-ar]');
