@@ -45,6 +45,10 @@
       </div>
 
       <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="btn-theme" aria-label="Toggle Theme" title="تبديل الوضع">
+          <span class="theme-icon">🌙</span>
+        </button>
         <!-- Language Switcher -->
         <button id="lang-toggle" class="btn-lang" aria-label="Toggle Language" title="تغيير اللغة">
           <span class="lang-label">عربي</span>
@@ -136,6 +140,7 @@
           <div class="hero-ctas">
             <a href="#work" class="btn btn-primary" data-en="Explore my work ↓" data-ar="استكشف أعمالي ↓">Explore my work ↓</a>
             <a href="#contact" class="btn btn-secondary" data-en="Let's work together" data-ar="يلّا نشتغل سوا">Let's work together</a>
+            <a href="#inquiry" class="btn btn-mediakit" id="btn-mediakit" data-en="Get Media Kit 📄" data-ar="طلب البروفايل التسويقي 📄">Get Media Kit 📄</a>
           </div>
 
           <div class="hero-stats">
@@ -180,6 +185,34 @@
         </div>
       </div>
     </div>
+
+    <!-- Client Brands Marquee Section -->
+    <section class="brands-section" aria-label="Trusted Brands">
+      <div class="container brands-header">
+        <span class="brands-label" data-en="TRUSTED BY FAST-GROWING BRANDS & FOUNDERS" data-ar="علامات تجارية وشركات وثقت بنا لتحقيق النمو">TRUSTED BY FAST-GROWING BRANDS & FOUNDERS</span>
+      </div>
+      <div class="brands-track-wrap">
+        <div class="brands-track">
+          <div class="brand-item">URBAN BITES</div>
+          <div class="brand-item">AURA FASHION</div>
+          <div class="brand-item">NILE COFFEE</div>
+          <div class="brand-item">TECHFEST 2026</div>
+          <div class="brand-item">TITAN FITNESS</div>
+          <div class="brand-item">BLOOM SKINCARE</div>
+          <div class="brand-item">LUXE INTERIORS</div>
+          <div class="brand-item">PURELY ORGANIC</div>
+          <!-- Duplicated for infinite smooth loop -->
+          <div class="brand-item">URBAN BITES</div>
+          <div class="brand-item">AURA FASHION</div>
+          <div class="brand-item">NILE COFFEE</div>
+          <div class="brand-item">TECHFEST 2026</div>
+          <div class="brand-item">TITAN FITNESS</div>
+          <div class="brand-item">BLOOM SKINCARE</div>
+          <div class="brand-item">LUXE INTERIORS</div>
+          <div class="brand-item">PURELY ORGANIC</div>
+        </div>
+      </div>
+    </section>
 
     <!-- Portfolio / Selected Work Section -->
     <section id="work" class="section work-section">
@@ -287,11 +320,12 @@
             </article>
 
             <!-- Card 05: Reels & Video -->
-            <article class="card" data-cat="reels" data-title-en="TechFest 2026 — Viral Promo Reels" data-title-ar="ريلز ترويجية لمؤتمر تيك فيست 2026">
+            <article class="card" data-cat="reels" data-title-en="TechFest 2026 — Viral Promo Reels" data-title-ar="ريلز ترويجية لمؤتمر تيك فيست 2026" data-reel-title="TechFest Viral Promo Reel" data-reel-desc="Vertical 9:16 high-tempo motion edit with sound design, achieving 2.4M reach.">
               <div class="card-media">
                 <div class="card-bg">
                   <img src="project5.webp" alt="TechFest Viral Promo" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
                   <div class="card-badge-top">REELS</div>
+                  <div class="reel-play-btn" aria-label="Play Reel">▶</div>
                 </div>
               </div>
               <div class="card-info">
@@ -323,11 +357,12 @@
             </article>
 
             <!-- Card 07: Reels & Video -->
-            <article class="card" data-cat="reels" data-title-en="Cairo Street Food — Short Video Series" data-title-ar="سلسلة فيديوهات أكلات شوارع القاهرة">
+            <article class="card" data-cat="reels" data-title-en="Cairo Street Food — Short Video Series" data-title-ar="سلسلة فيديوهات أكلات شوارع القاهرة" data-reel-title="Cairo Street Food Series" data-reel-desc="Food cinematography & sound design reels averaging 450K organic views.">
               <div class="card-media">
                 <div class="card-bg">
                   <img src="project7.webp" alt="Cairo Street Food" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
                   <div class="card-badge-top">SERIES</div>
+                  <div class="reel-play-btn" aria-label="Play Reel">▶</div>
                 </div>
               </div>
               <div class="card-info">
@@ -440,6 +475,41 @@
           <button class="nav-arrow next" id="btn-next" aria-label="Next Slide">→</button>
         </div>
 
+      </div>
+    </section>
+
+    <!-- Before & After Campaign Growth Results Section -->
+    <section class="section comparison-section">
+      <div class="container">
+        <span class="sec-kicker" data-en="MEASURABLE IMPACT" data-ar="نتائج ملموسة بالأرقام">MEASURABLE IMPACT</span>
+        <h2 class="sec-title" data-en="BEFORE VS. AFTER." data-ar="الفارق قبل وبعد التعاون معنا.">BEFORE VS. AFTER.</h2>
+        <p class="sec-desc" data-en="Real transformation metrics achieved across client campaigns and paid acquisition funnels." data-ar="مؤشرات أداء وتحول حقيقية حققناها في حملات عملائنا ومبيعاتهم.">
+          Real transformation metrics achieved across client campaigns and paid acquisition funnels.
+        </p>
+
+        <div class="compare-grid">
+          
+          <div class="compare-card compare-before">
+            <div class="compare-badge badge-before" data-en="BEFORE COLLABORATION" data-ar="قبل التعاون">BEFORE COLLABORATION</div>
+            <ul class="compare-list">
+              <li>❌ <span data-en="Low ROAS (avg. 1.1x - 1.4x) on ad spend" data-ar="عائد إعلانات ضعيف (1.1x - 1.4x) وميزانيات مهدرة">Low ROAS (avg. 1.1x - 1.4x) on ad spend</span></li>
+              <li>❌ <span data-en="Generic ad creatives without viral hooks" data-ar="تصاميم تقليدية بدون هوك سريع يشد الانتباه">Generic ad creatives without viral hooks</span></li>
+              <li>❌ <span data-en="High cost per acquisition (CPA) on Meta & TikTok" data-ar="تكلفة اكتساب عميل مرتفعة ومكلفة">High cost per acquisition (CPA) on Meta & TikTok</span></li>
+              <li>❌ <span data-en="Inconsistent brand identity across social channels" data-ar="هوية بصرية غير موحدة ومحتوى غير منتظم">Inconsistent brand identity across social channels</span></li>
+            </ul>
+          </div>
+
+          <div class="compare-card compare-after">
+            <div class="compare-badge badge-after" data-en="WITH MAHMOUD SAAD" data-ar="مع محمود سعد">WITH MAHMOUD SAAD</div>
+            <ul class="compare-list">
+              <li>✅ <strong data-en="3.4x - 5.2x ROAS" data-ar="عائد إعلانات 3.4x - 5.2x">3.4x - 5.2x ROAS</strong> <span data-en="consistently scaled on paid ads" data-ar="وتحقيق أرباح حقيقية مستمرة">consistently scaled on paid ads</span></li>
+              <li>✅ <strong data-en="Viral Vertical Hooks" data-ar="ريلز احترافية بهوك سريع">Viral Vertical Hooks</strong> <span data-en="driving millions of organic views" data-ar="تحقق ملايين المشاهدات الأورجانيك">driving millions of organic views</span></li>
+              <li>✅ <strong data-en="45% Lower CPA" data-ar="تخفيض 45% في تكلفة العميل">45% Lower CPA</strong> <span data-en="through precise high-intent audience targeting" data-ar="باستهداف جمهور مهتم بالشراء الفوري">through precise high-intent audience targeting</span></li>
+              <li>✅ <strong data-en="Cohesive Visual Engine" data-ar="منظومة بصرية متكاملة">Cohesive Visual Engine</strong> <span data-en="that turns casual scrollers into loyal customers" data-ar="تحول المتابعين لعملاء دائمين">that turns casual scrollers into loyal customers</span></li>
+            </ul>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -741,6 +811,36 @@
           Have a project in mind, need to launch a high-converting campaign, or looking for ongoing creative marketing? Hit me up directly.
         </p>
 
+        <!-- Contact Form (Direct Project Inquiry) -->
+        <div class="inquiry-box" id="inquiry">
+          <h3 class="inquiry-title" data-en="Request a Custom Proposal / Media Kit" data-ar="طلب عرض سعر مخصص / البروفايل">Request a Custom Proposal / Media Kit</h3>
+          <p class="inquiry-sub" data-en="Fill in your project details and I will reply within 24 hours with tailored strategy & rates." data-ar="اكتب تفاصيل مشروعك وهتواصل معاك خلال 24 ساعة بأفضل خطة عمل وميزانية مقترحة.">
+            Fill in your project details and I will reply within 24 hours with tailored strategy & rates.
+          </p>
+
+          <form id="inquiry-form" class="inquiry-form">
+            <div class="form-row">
+              <input type="text" id="form-name" class="form-input" placeholder="Your Name / Brand (اسمك أو اسم البراند)" required>
+              <input type="tel" id="form-phone" class="form-input" placeholder="WhatsApp / Phone Number (رقم الواتساب)" required>
+            </div>
+            <div class="form-row">
+              <select id="form-service" class="form-input form-select" required>
+                <option value="" disabled selected>Select Service (اختر الخدمة المطلوبة)</option>
+                <option value="Paid Ads & Media Buying">Paid Ads & Media Buying (إعلانات ممولة)</option>
+                <option value="Reels & Video Production">Reels & Video Production (إنتاج وتصوير ريلز)</option>
+                <option value="Full Social Media Management">Full Social Media Management (إدارة سوشيال ميديا كاملة)</option>
+                <option value="Commercial Photography">Commercial Photography (تصوير تجاري)</option>
+                <option value="Full Brand Identity">Full Brand Identity (هوية بصرية كاملة)</option>
+              </select>
+            </div>
+            <textarea id="form-notes" class="form-input form-textarea" rows="3" placeholder="Brief about your goals or budget (نبذة سريعة عن أهدافك أو ميزانيتك)"></textarea>
+            
+            <button type="submit" class="btn btn-primary btn-submit-inquiry" data-en="Send via WhatsApp 🚀" data-ar="إرسال الطلب عبر الواتساب 🚀">
+              Send via WhatsApp 🚀
+            </button>
+          </form>
+        </div>
+
         <!-- Huge WhatsApp CTA -->
         <div class="contact-cta-wrap">
           <a href="https://wa.me/201095437810" target="_blank" rel="noopener" class="btn-whatsapp">
@@ -802,6 +902,21 @@
         <span class="modal-result" id="modal-result">+340% ROAS · 1.2M Reach</span>
       </div>
       <div class="modal-body">
+        
+        <!-- Video Preview Area if Reel -->
+        <div id="modal-video-wrap" class="modal-video-wrap" style="display: none;">
+          <div class="mock-reel-frame">
+            <div class="mock-reel-inner">
+              <div class="mock-reel-badge">9:16 VERTICAL REEL</div>
+              <div class="mock-reel-art" id="mock-reel-art">🎬</div>
+              <p class="mock-reel-text" id="mock-reel-text">Reel Preview</p>
+              <div class="mock-audio-wave">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="modal-section">
           <h4 data-en="🎯 The Objective & Challenge" data-ar="🎯 الهدف والتحدي">🎯 The Objective & Challenge</h4>
           <p id="modal-challenge" data-en="The brand struggled with high cost-per-acquisition (CPA) and low engagement on generic ad formats across Facebook and Instagram." data-ar="البراند كان بيعاني من تكلفة اكتساب عميل مرتفعة (CPA) وتفاعل ضعيف مع الإعلانات التقليدية.">

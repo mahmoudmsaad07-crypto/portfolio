@@ -507,7 +507,94 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =========================================================================
-  // 11. SMOOTH SCROLLING
+  // 11. THEME TOGGLE (DARK / LIGHT MODE)
+  // =========================================================================
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('.theme-icon') : null;
+  let savedTheme = localStorage.getItem('mahmoud_portfolio_theme') || 'light';
+
+  function applyTheme(theme) {
+    savedTheme = theme;
+    localStorage.setItem('mahmoud_portfolio_theme', theme);
+    const isDark = theme === 'dark';
+    document.body.classList.toggle('dark-mode', isDark);
+    if (themeIcon) {
+      themeIcon.textContent = isDark ? '☀️' : '🌙';
+    }
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const nextTheme = savedTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(nextTheme);
+    });
+  }
+  applyTheme(savedTheme);
+
+  // =========================================================================
+  // 12. PROJECT INQUIRY FORM (WHATSAPP AUTOMATION)
+  // =========================================================================
+  const inquiryForm = document.getElementById('inquiry-form');
+  if (inquiryForm) {
+    inquiryForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('form-name')?.value.trim();
+      const phone = document.getElementById('form-phone')?.value.trim();
+      const service = document.getElementById('form-service')?.value;
+      const notes = document.getElementById('form-notes')?.value.trim();
+
+      const message = `أهلاً يا محمود، أنا ${name}%0Aرقم التواصل: ${phone}%0Aمهتم بخدمة: ${service}%0Aتفاصيل المشروع: ${notes || 'مهتم بالحصول على عرض سعر وخطة عمل'}`;
+      window.open(`https://wa.me/201095437810?text=${message}`, '_blank');
+    });
+  }
+
+  // =========================================================================
+  // 13. MEDIA KIT DOWNLOAD / GENERATION
+  // =========================================================================
+  const mediaKitBtn = document.getElementById('btn-mediakit');
+  if (mediaKitBtn) {
+    mediaKitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const inquirySection = document.getElementById('inquiry');
+      if (inquirySection) {
+        inquirySection.scrollIntoView({ behavior: 'smooth' });
+        const notes = document.getElementById('form-notes');
+        if (notes) {
+          notes.value = 'مهتم بتحميل الـ Media Kit وعرض باقات التسويق الشهرية المتاحة.';
+          notes.focus();
+        }
+      }
+    });
+  }
+
+  // =========================================================================
+  // 14. ENHANCE MODAL FOR REELS
+  // =========================================================================
+  const originalOpenCaseStudy = openCaseStudy;
+  openCaseStudy = function(card) {
+    originalOpenCaseStudy(card);
+    const videoWrap = document.getElementById('modal-video-wrap');
+    const reelTitle = card.getAttribute('data-reel-title');
+    const reelDesc = card.getAttribute('data-reel-desc');
+    const mockText = document.getElementById('mock-reel-text');
+
+    if (videoWrap) {
+      if (reelTitle) {
+        videoWrap.style.display = 'flex';
+        if (mockText) mockText.textContent = `${reelTitle} — ${reelDesc || 'Vertical Format'}`;
+      } else {
+        videoWrap.style.display = 'none';
+      }
+    }
+  };
+
+  // Re-bind click handlers with enhanced openCaseStudy
+  document.querySelectorAll('.card').forEach(card => {
+    card.onclick = () => openCaseStudy(card);
+  });
+
+  // =========================================================================
+  // 15. SMOOTH SCROLLING
   // =========================================================================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
