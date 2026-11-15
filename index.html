@@ -20,6 +20,9 @@
 </head>
 <body class="loaded">
 
+  <!-- Top Page Scroll Progress Indicator -->
+  <div id="top-scroll-progress" class="top-scroll-progress" aria-hidden="true"></div>
+
   <!-- Custom Cursor -->
   <div class="cur" id="cursor" aria-hidden="true"><span>VIEW ↗</span></div>
 
@@ -120,6 +123,12 @@
           </div>
 
           <div class="hero-kicker" data-en="CREATIVE MARKETING STRATEGIST" data-ar="مبدع تسويقي واستراتيجي نمو">CREATIVE MARKETING STRATEGIST</div>
+
+          <!-- Live Availability Status Pill -->
+          <div class="availability-pill">
+            <span class="pulsing-dot"></span>
+            <span class="avail-text" data-en="Available for New Projects & Campaigns" data-ar="متاح للتعاقد والمشاريع والحملات الجديدة">Available for New Projects & Campaigns</span>
+          </div>
           
           <h1 class="hero-title">
             <span class="first-name">MAHMOUD</span>
@@ -582,6 +591,57 @@
       </div>
     </section>
 
+    <!-- My 4-Step Growth Process Section -->
+    <section class="section process-section" id="process">
+      <div class="container">
+        <span class="sec-kicker" data-en="HOW IT WORKS" data-ar="طريقة العمل">HOW IT WORKS</span>
+        <h2 class="sec-title dark-text" data-en="THE 4-STEP GROWTH SYSTEM." data-ar="منهجية العمل والنمو في 4 خطوات.">THE 4-STEP GROWTH SYSTEM.</h2>
+        <p class="sec-desc dark-text" data-en="A proven, data-driven framework designed to scale brands predictably from day one." data-ar="خطة عمل منظمة ومبنية على الأرقام والبيانات لتحقيق نتائج مبيعات واضحة ومستدامة.">
+          A proven, data-driven framework designed to scale brands predictably from day one.
+        </p>
+
+        <div class="process-grid">
+          
+          <div class="process-card">
+            <span class="step-num">01</span>
+            <div class="step-icon">🔍</div>
+            <h3 class="step-title" data-en="Discovery & Audit" data-ar="التحليل والاستكشاف">Discovery & Audit</h3>
+            <p class="step-desc" data-en="Deep dive into your market, competitors, customer pain points, and current conversion bottlenecks." data-ar="دراسة شاملة لنشاطك، فحص المنافسين، وفهم الجمهور المستهدف لتحديد أسرع فرص النمو.">
+              Deep dive into your market, competitors, customer pain points, and current conversion bottlenecks.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span class="step-num">02</span>
+            <div class="step-icon">🎯</div>
+            <h3 class="step-title" data-en="Strategy & Hooks" data-ar="الاستراتيجية والهوك">Strategy & Hooks</h3>
+            <p class="step-desc" data-en="Formulating irresistible ad offers, content calendars, and viral 3-second hook scripts." data-ar="صياغة عروض بيع قوية، وجداول نشر محكمة، وسيناريوهات ريلز تجذب الانتباه من أول ثانيتين.">
+              Formulating irresistible ad offers, content calendars, and viral 3-second hook scripts.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span class="step-num">03</span>
+            <div class="step-icon">🎬</div>
+            <h3 class="step-title" data-en="High-Impact Production" data-ar="الإنتاج الإبداعي">High-Impact Production</h3>
+            <p class="step-desc" data-en="Shooting commercial product photography, cinematic dynamic reels, and high-CTR ad designs." data-ar="تنفيذ جلسات التصوير التجاري، مونتاج الريلز السريعة، وتصميم إعلانات بنسب نقر وتحويل عالية.">
+              Shooting commercial product photography, cinematic dynamic reels, and high-CTR ad designs.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span class="step-num">04</span>
+            <div class="step-icon">📈</div>
+            <h3 class="step-title" data-en="Scaling & Profit" data-ar="الإطلاق ومضاعفة الأرباح">Scaling & Profit</h3>
+            <p class="step-desc" data-en="Launching performance ads on Meta & TikTok, A/B testing, and scaling winning funnels to 4x+ ROAS." data-ar="إطلاق الحملات الممولة، اختبار الجماهير، ومضاعفة الميزانيات الرابحة لتحقيق أعلى عائد مبيعات.">
+              Launching performance ads on Meta & TikTok, A/B testing, and scaling winning funnels to 4x+ ROAS.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Services / What I Do Section -->
     <section id="services" class="section services-section">
       <div class="container">
@@ -924,6 +984,10 @@
             <svg class="pill-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             <span data-en="Call Directly" data-ar="اتصال مباشر">Call Directly</span>
           </a>
+          <button class="sec-pill btn-copy-phone" id="btn-copy-phone" title="Copy Phone Number" aria-label="Copy Phone Number">
+            <svg class="pill-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span class="copy-text" data-en="Copy Number" data-ar="نسخ الرقم">Copy Number</span>
+          </button>
           <a href="https://www.linkedin.com/in/mahmoud-saad-674711167/" target="_blank" rel="noopener" class="sec-pill" id="link-linkedin" title="LinkedIn Profile">
             <svg class="pill-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
             <span>LinkedIn</span>
@@ -953,6 +1017,14 @@
       </p>
     </div>
   </footer>
+
+  <!-- Back To Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top" title="العودة للأعلى">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+  </button>
+
+  <!-- Copy Toast Notification -->
+  <div id="copy-toast" class="copy-toast" aria-live="polite">✓ Copied to clipboard!</div>
 
   <!-- Floating WhatsApp Pill Button -->
   <a href="https://wa.me/201095437810" target="_blank" rel="noopener" class="float-wa-btn" id="float-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">

@@ -2382,6 +2382,209 @@ html[dir="rtl"] .inquiry-box {
   0% { height: 6px; }
   100% { height: 24px; }
 }
+
+/* 19. Fast Zero-Weight Upgrades: Scroll Bar, Availability, Process, Toast, BackToTop
+   ========================================================================== */
+
+/* Top Scroll Reading Progress */
+.top-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--lime);
+  z-index: 9999;
+  transition: width 0.08s ease-out;
+  box-shadow: 0 0 10px rgba(224, 244, 121, 0.8);
+}
+
+/* Availability Status Pill */
+.availability-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  color: #16a34a;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+body.dark-mode .availability-pill {
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.12);
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.pulsing-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: pulseGreen 1.8s infinite;
+}
+
+@keyframes pulseGreen {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 7px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* Process Section (The 4-Step System) */
+.process-section {
+  background: var(--cream);
+  padding: clamp(60px, 9vw, 120px) 0;
+  border-top: 1px solid rgba(24, 35, 63, 0.08);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.process-card {
+  background: #fff;
+  border: 2px solid var(--navy);
+  border-radius: 20px;
+  padding: 32px 24px;
+  position: relative;
+  box-shadow: 4px 4px 0px var(--navy);
+  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s ease;
+}
+
+body.dark-mode .process-card {
+  background: #151e33;
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.6);
+}
+
+.process-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 8px 8px 0px var(--lime);
+}
+
+.step-num {
+  font-family: var(--h);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--navy);
+  opacity: 0.12;
+  line-height: 1;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+html[dir="rtl"] .step-num {
+  right: auto;
+  left: 20px;
+}
+
+.step-icon {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+.step-title {
+  font-family: var(--h);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+body.dark-mode .step-title {
+  color: #f1f5f9;
+}
+
+.step-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(24, 35, 63, 0.8);
+}
+
+body.dark-mode .step-desc {
+  color: rgba(241, 245, 249, 0.75);
+}
+
+/* Copy Toast */
+.copy-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--navy);
+  color: var(--lime);
+  border: 1.5px solid var(--lime);
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-family: var(--h);
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 10001;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s var(--ease-spring);
+}
+
+.copy-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Back To Top Button */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 84px;
+  right: 26px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--lime);
+  border: 2px solid var(--lime);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: all 0.3s var(--ease-spring);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+html[dir="rtl"] .back-to-top-btn {
+  right: auto;
+  left: 26px;
+}
+
+.back-to-top-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.back-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.back-to-top-btn:hover {
+  background: var(--lime);
+  color: var(--navy);
+  transform: translateY(-4px) scale(1.05);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

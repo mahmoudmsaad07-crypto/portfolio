@@ -635,7 +635,63 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =========================================================================
-  // 9. INITIALIZE LOCAL STORAGE LANGUAGE
+  // 16. TOP SCROLL PROGRESS & BACK TO TOP BUTTON
+  // =========================================================================
+  const topScroll = document.getElementById('top-scroll-progress');
+  const backToTop = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    if (docHeight > 0) {
+      const scrollPct = (window.scrollY / docHeight) * 100;
+      if (topScroll) topScroll.style.width = `${scrollPct}%`;
+    }
+
+    if (backToTop) {
+      if (window.scrollY > 450) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    }
+  }, { passive: true });
+
+  if (backToTop) {
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // =========================================================================
+  // 17. COPY PHONE NUMBER WITH TOAST
+  // =========================================================================
+  const copyBtn = document.getElementById('btn-copy-phone');
+  const copyToast = document.getElementById('copy-toast');
+
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      const phone = '+201095437810';
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(phone).then(() => {
+          showToast(currentLang === 'ar' ? '✓ تم نسخ رقم الواتساب والهاتف!' : '✓ Phone number copied!');
+        });
+      } else {
+        showToast(currentLang === 'ar' ? '✓ الرقم: +201095437810' : '✓ Copied: +201095437810');
+      }
+    });
+  }
+
+  function showToast(msg) {
+    if (!copyToast) return;
+    copyToast.textContent = msg;
+    copyToast.classList.add('show');
+    setTimeout(() => {
+      copyToast.classList.remove('show');
+    }, 2500);
+  }
+
+  // =========================================================================
+  // 18. INITIALIZE LOCAL STORAGE LANGUAGE
   // =========================================================================
   applyLanguage(currentLang);
   setTimeout(updateNavIndicator, 200);
