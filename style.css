@@ -1470,26 +1470,44 @@ html[dir="rtl"] .tool-num {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.16);
   color: var(--cream);
   padding: 12px 24px;
   border-radius: 40px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: all 0.25s ease;
+  font-family: var(--h);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: all 0.28s var(--ease-spring);
+  text-decoration: none;
 }
 
 .sec-pill:hover {
-  background: var(--cream);
+  background: var(--lime);
   color: var(--navy);
-  border-color: var(--cream);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  border-color: var(--lime);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(224, 244, 121, 0.3);
 }
 
-.pill-icon {
-  font-size: 1.1rem;
+.pill-svg-icon {
+  width: 18px;
+  height: 18px;
+  stroke: var(--lime);
+  transition: stroke 0.25s ease, transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.sec-pill:hover .pill-svg-icon {
+  stroke: var(--navy);
+  transform: scale(1.1);
+}
+
+.phone-text {
+  font-family: var(--h);
+  font-weight: 800;
+  letter-spacing: 0.04em;
 }
 
 /* 13. Footer
