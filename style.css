@@ -2025,18 +2025,79 @@ body.dark-mode .brand-item {
   background: #fff;
 }
 
-@keyframes brandsScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* Client Brands (Double-Track Marquee & Filtering) */
+.client-sector-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 28px auto 0;
 }
 
-html[dir="rtl"] .brands-track {
-  animation: brandsScrollRtl 28s linear infinite;
+.client-tab {
+  background: rgba(24, 35, 63, 0.06);
+  border: 1.5px solid rgba(24, 35, 63, 0.15);
+  color: var(--navy);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-@keyframes brandsScrollRtl {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(50%); }
+body.dark-mode .client-tab {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #f1f5f9;
+}
+
+.client-tab:hover,
+.client-tab.active {
+  background: var(--lime);
+  color: #18233f;
+  border-color: var(--lime);
+  transform: translateY(-2px);
+}
+
+.track-left {
+  animation: brandsScroll 36s linear infinite;
+}
+
+.track-right {
+  animation: brandsScrollReverse 36s linear infinite;
+}
+
+@keyframes brandsScrollReverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+html[dir="rtl"] .track-left {
+  animation: brandsScrollRtl 36s linear infinite;
+}
+
+html[dir="rtl"] .track-right {
+  animation: brandsScrollReverseRtl 36s linear infinite;
+}
+
+@keyframes brandsScrollReverseRtl {
+  0% { transform: translateX(50%); }
+  100% { transform: translateX(0); }
+}
+
+.brand-item.dimmed {
+  opacity: 0.15 !important;
+  filter: grayscale(100%);
+  transform: scale(0.95);
+}
+
+.brand-item.highlighted {
+  border-color: var(--lime);
+  background: var(--lime);
+  color: #18233f;
+  opacity: 1 !important;
+  transform: scale(1.08);
 }
 
 /* Comparison Section (Before vs After) */

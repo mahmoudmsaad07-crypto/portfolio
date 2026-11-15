@@ -568,7 +568,33 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // 14. ENHANCE MODAL FOR REELS
+  // 14. CLIENT SECTOR FILTERING INTERACTION
+  // =========================================================================
+  const clientTabs = document.querySelectorAll('.client-tab');
+  const brandPills = document.querySelectorAll('.brand-item[data-sector]');
+
+  clientTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      clientTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const selected = tab.getAttribute('data-sector');
+
+      brandPills.forEach(pill => {
+        const sector = pill.getAttribute('data-sector');
+        if (selected === 'all' || sector === selected) {
+          pill.classList.remove('dimmed');
+          if (selected !== 'all') pill.classList.add('highlighted');
+          else pill.classList.remove('highlighted');
+        } else {
+          pill.classList.add('dimmed');
+          pill.classList.remove('highlighted');
+        }
+      });
+    });
+  });
+
+  // =========================================================================
+  // 15. ENHANCE MODAL FOR REELS
   // =========================================================================
   const originalOpenCaseStudy = openCaseStudy;
   openCaseStudy = function(card) {

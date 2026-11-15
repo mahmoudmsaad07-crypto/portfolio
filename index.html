@@ -190,50 +190,95 @@
       </div>
     </div>
 
-    <!-- Client Brands Marquee Section -->
-    <section class="brands-section" aria-label="Trusted Brands">
+    <!-- Client Brands Section (Next-Level Double Marquee + Interactive Grid) -->
+    <section class="brands-section" id="clients" aria-label="Trusted Brands">
       <div class="container brands-header">
-        <span class="brands-label" data-en="TRUSTED BY 150+ CLIENTS & BRANDS ACROSS EGYPT & THE GULF" data-ar="علامات تجارية وشركات كبرى وثقت بنا في مصر والخليج">TRUSTED BY 150+ CLIENTS & BRANDS ACROSS EGYPT & THE GULF</span>
+        <span class="sec-kicker" data-en="TRACK RECORD" data-ar="سجل الثقة">TRACK RECORD</span>
+        <h2 class="sec-title dark-text" data-en="TRUSTED BY 150+ BRANDS." data-ar="شركاء النجاح والعلامات التجارية.">TRUSTED BY 150+ BRANDS.</h2>
+        <p class="sec-desc dark-text" data-en="A portfolio of market leaders, clinic chains, restaurants, fashion houses, and tech platforms scaled across Egypt & the Gulf." data-ar="مجموعة من كبرى الشركات والعيادات والمطاعم ودور الأزياء والمنصات التي ساهمنا في مضاعفة أرباحها في مصر والخليج.">
+          A portfolio of market leaders, clinic chains, restaurants, fashion houses, and tech platforms scaled across Egypt & the Gulf.
+        </p>
+
+        <!-- Sector Filter Pills for Clients -->
+        <div class="client-sector-tabs">
+          <button class="client-tab active" data-sector="all" data-en="All Partners" data-ar="كل الشركاء">All Partners</button>
+          <button class="client-tab" data-sector="food" data-en="F&B & Cafes" data-ar="مطاعم وكافيهات">F&B & Cafes</button>
+          <button class="client-tab" data-sector="medical" data-en="Medical & Health" data-ar="مراكز طبية وعيادات">Medical & Health</button>
+          <button class="client-tab" data-sector="fashion" data-en="Fashion & Retail" data-ar="أزياء ومتاجر">Fashion & Retail</button>
+          <button class="client-tab" data-sector="decor" data-en="Decor & Industrial" data-ar="ديكور وصناعة">Decor & Industrial</button>
+          <button class="client-tab" data-sector="events" data-en="Venues & Events" data-ar="قاعات ومناسبات">Venues & Events</button>
+        </div>
       </div>
+
+      <!-- Top Row Marquee (Scrolling Left) -->
       <div class="brands-track-wrap">
-        <div class="brands-track">
-          <div class="brand-item brand-logo-pill"><img src="client_pizza_mood.jpg" alt="Pizza Mood" class="brand-img"> <span>Pizza MOOD</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_chicken_wings.jpg" alt="Chicken Wings" class="brand-img"> <span>تشيكن وينجز</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_velvetbean.jpg" alt="Velvetbean Qatar" class="brand-img"> <span>Velvetbean (Qatar)</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_angy.jpg" alt="Angy Clinics" class="brand-img"> <span>Angy Clinics</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_mindcare.jpg" alt="Mind Care Center" class="brand-img"> <span>Mind Care Center</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_mostafa.png" alt="Dr Mostafa Talaat" class="brand-img"> <span>د. مصطفى طلعت</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_medhat.png" alt="Dr Medhat Soliman" class="brand-img"> <span>د. محمد مدحت</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_captain.jpg" alt="Al Captain Sports" class="brand-img"> <span>الكابتن الرياضي</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_lolis.jpg" alt="Loli's Brands" class="brand-img"> <span>Loli's Brands</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_noora.jpg" alt="Noora Perfume" class="brand-img"> <span>Noora Perfume</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_gawish.jpg" alt="Gawish Store" class="brand-img"> <span>Gawish Store</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_decor_home.png" alt="Decor Home" class="brand-img"> <span>Decor Home</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_triple_a.png" alt="Triple A Decor" class="brand-img"> <span>Triple A Décor</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_woody.jpg" alt="Woody Decorations" class="brand-img"> <span>Woody Décor</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_aya_essa.jpg" alt="Aya Essa Atelier" class="brand-img"> <span>Aya Essa Atelier</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_mas_academy.jpg" alt="MAS Academy" class="brand-img"> <span>MAS Academy</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_dar_almlok.jpg" alt="Dar Al Molok" class="brand-img"> <span>دار الملوك</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_sahari.png" alt="Sahari" class="brand-img"> <span>Sahari</span></div>
-          <!-- Duplicated for infinite seamless loop -->
-          <div class="brand-item brand-logo-pill"><img src="client_pizza_mood.jpg" alt="Pizza Mood" class="brand-img"> <span>Pizza MOOD</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_chicken_wings.jpg" alt="Chicken Wings" class="brand-img"> <span>تشيكن وينجز</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_velvetbean.jpg" alt="Velvetbean Qatar" class="brand-img"> <span>Velvetbean (Qatar)</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_angy.jpg" alt="Angy Clinics" class="brand-img"> <span>Angy Clinics</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_mindcare.jpg" alt="Mind Care Center" class="brand-img"> <span>Mind Care Center</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_mostafa.png" alt="Dr Mostafa Talaat" class="brand-img"> <span>د. مصطفى طلعت</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_medhat.png" alt="Dr Medhat Soliman" class="brand-img"> <span>د. محمد مدحت</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_captain.jpg" alt="Al Captain Sports" class="brand-img"> <span>الكابتن الرياضي</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_lolis.jpg" alt="Loli's Brands" class="brand-img"> <span>Loli's Brands</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_noora.jpg" alt="Noora Perfume" class="brand-img"> <span>Noora Perfume</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_gawish.jpg" alt="Gawish Store" class="brand-img"> <span>Gawish Store</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_decor_home.png" alt="Decor Home" class="brand-img"> <span>Decor Home</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_triple_a.png" alt="Triple A Decor" class="brand-img"> <span>Triple A Décor</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_woody.jpg" alt="Woody Decorations" class="brand-img"> <span>Woody Décor</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_aya_essa.jpg" alt="Aya Essa Atelier" class="brand-img"> <span>Aya Essa Atelier</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_mas_academy.jpg" alt="MAS Academy" class="brand-img"> <span>MAS Academy</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_dar_almlok.jpg" alt="Dar Al Molok" class="brand-img"> <span>دار الملوك</span></div>
-          <div class="brand-item brand-logo-pill"><img src="client_sahari.png" alt="Sahari" class="brand-img"> <span>Sahari</span></div>
+        <div class="brands-track track-left">
+          <div class="brand-item brand-logo-pill" data-sector="food"><img src="client_pizza_mood.jpg" alt="Pizza Mood" class="brand-img"> <span>Pizza MOOD</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="food"><img src="client_chicken_wings.jpg" alt="Chicken Wings" class="brand-img"> <span>تشيكن وينجز</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="food"><img src="client_velvetbean.jpg" alt="Velvetbean Qatar" class="brand-img"> <span>Velvetbean (Qatar)</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="medical"><img src="client_angy.jpg" alt="Angy Clinics" class="brand-img"> <span>Angy Clinics</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="medical"><img src="client_mindcare.jpg" alt="Mind Care Center" class="brand-img"> <span>Mind Care Center</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="medical"><img src="client_mostafa.png" alt="Dr Mostafa Talaat" class="brand-img"> <span>د. مصطفى طلعت</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="medical"><img src="client_medhat.png" alt="Dr Medhat Soliman" class="brand-img"> <span>د. محمد مدحت</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="fashion"><img src="client_captain.jpg" alt="Al Captain Sports" class="brand-img"> <span>الكابتن الرياضي</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="fashion"><img src="client_lolis.jpg" alt="Loli's Brands" class="brand-img"> <span>Loli's Brands</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="fashion"><img src="client_noora.jpg" alt="Noora Perfume" class="brand-img"> <span>Noora Perfume</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="fashion"><img src="client_gawish.jpg" alt="Gawish Store" class="brand-img"> <span>Gawish Store</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="decor"><img src="client_decor_home.png" alt="Decor Home" class="brand-img"> <span>Decor Home</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="decor"><img src="client_triple_a.png" alt="Triple A Decor" class="brand-img"> <span>Triple A Décor</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="decor"><img src="client_woody.jpg" alt="Woody Decorations" class="brand-img"> <span>Woody Décor</span></div>
+          <!-- Loop Duplication -->
+          <div class="brand-item brand-logo-pill" data-sector="food"><img src="client_pizza_mood.jpg" alt="Pizza Mood" class="brand-img"> <span>Pizza MOOD</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="food"><img src="client_chicken_wings.jpg" alt="Chicken Wings" class="brand-img"> <span>تشيكن وينجز</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="food"><img src="client_velvetbean.jpg" alt="Velvetbean Qatar" class="brand-img"> <span>Velvetbean (Qatar)</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="medical"><img src="client_angy.jpg" alt="Angy Clinics" class="brand-img"> <span>Angy Clinics</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="medical"><img src="client_mindcare.jpg" alt="Mind Care Center" class="brand-img"> <span>Mind Care Center</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="medical"><img src="client_mostafa.png" alt="Dr Mostafa Talaat" class="brand-img"> <span>د. مصطفى طلعت</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="medical"><img src="client_medhat.png" alt="Dr Medhat Soliman" class="brand-img"> <span>د. محمد مدحت</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="fashion"><img src="client_captain.jpg" alt="Al Captain Sports" class="brand-img"> <span>الكابتن الرياضي</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="fashion"><img src="client_lolis.jpg" alt="Loli's Brands" class="brand-img"> <span>Loli's Brands</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="fashion"><img src="client_noora.jpg" alt="Noora Perfume" class="brand-img"> <span>Noora Perfume</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="fashion"><img src="client_gawish.jpg" alt="Gawish Store" class="brand-img"> <span>Gawish Store</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="decor"><img src="client_decor_home.png" alt="Decor Home" class="brand-img"> <span>Decor Home</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="decor"><img src="client_triple_a.png" alt="Triple A Decor" class="brand-img"> <span>Triple A Décor</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="decor"><img src="client_woody.jpg" alt="Woody Decorations" class="brand-img"> <span>Woody Décor</span></div>
+        </div>
+      </div>
+
+      <!-- Bottom Row Marquee (Scrolling Right - Multi-Directional Depth) -->
+      <div class="brands-track-wrap" style="margin-top: 14px;">
+        <div class="brands-track track-right">
+          <div class="brand-item brand-logo-pill" data-sector="fashion"><img src="client_aya_essa.jpg" alt="Aya Essa Atelier" class="brand-img"> <span>Aya Essa Atelier</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="events"><img src="client_best_occasion.jpg" alt="Best Occasion" class="brand-img"> <span>Best Occasion EG</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="events"><img src="client_tawoos.jpg" alt="Al Tawoos Hall" class="brand-img"> <span>قاعة الطاووس</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="events"><img src="client_milano.jpg" alt="Milano Plaza" class="brand-img"> <span>قاعة ميلانو بلازا</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="events"><img src="client_rayhana.jpg" alt="Rayhana Hall" class="brand-img"> <span>قاعة ريحانة</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="events"><img src="client_dar_almlok.jpg" alt="Dar Al Molok" class="brand-img"> <span>دار الملوك</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="decor"><img src="client_mostafa_furniture.jpg" alt="Mostafa Furniture" class="brand-img"> <span>موبيليات المصطفى</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="decor"><img src="client_seyofi.jpg" alt="Al Seyofi" class="brand-img"> <span>السيوفي للألومنتال</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="decor"><img src="client_juhayna_alum.jpg" alt="Juhayna UPVC" class="brand-img"> <span>جهينة للألوميتال & UPVC</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="decor"><img src="client_samir_ayad.png" alt="Samir Ayad" class="brand-img"> <span>محلات سمير عياد</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="tech"><img src="client_mas_academy.jpg" alt="MAS Academy" class="brand-img"> <span>MAS Academy</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="tech"><img src="client_iit.jpg" alt="IIT Institute" class="brand-img"> <span>IIT Institute</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="tech"><img src="client_hosein_laptop.jpg" alt="Al Hosein Laptop" class="brand-img"> <span>الحسين لاب توب</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="tech"><img src="client_bab_rezk.jpg" alt="Bab Rezk" class="brand-img"> <span>باب رزق</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="food"><img src="client_sahari.png" alt="Sahari" class="brand-img"> <span>Sahari Food</span></div>
+          <!-- Loop Duplication -->
+          <div class="brand-item brand-logo-pill" data-sector="fashion"><img src="client_aya_essa.jpg" alt="Aya Essa Atelier" class="brand-img"> <span>Aya Essa Atelier</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="events"><img src="client_best_occasion.jpg" alt="Best Occasion" class="brand-img"> <span>Best Occasion EG</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="events"><img src="client_tawoos.jpg" alt="Al Tawoos Hall" class="brand-img"> <span>قاعة الطاووس</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="events"><img src="client_milano.jpg" alt="Milano Plaza" class="brand-img"> <span>قاعة ميلانو بلازا</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="events"><img src="client_rayhana.jpg" alt="Rayhana Hall" class="brand-img"> <span>قاعة ريحانة</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="events"><img src="client_dar_almlok.jpg" alt="Dar Al Molok" class="brand-img"> <span>دار الملوك</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="decor"><img src="client_mostafa_furniture.jpg" alt="Mostafa Furniture" class="brand-img"> <span>موبيليات المصطفى</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="decor"><img src="client_seyofi.jpg" alt="Al Seyofi" class="brand-img"> <span>السيوفي للألومنتال</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="decor"><img src="client_juhayna_alum.jpg" alt="Juhayna UPVC" class="brand-img"> <span>جهينة للألوميتال & UPVC</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="decor"><img src="client_samir_ayad.png" alt="Samir Ayad" class="brand-img"> <span>محلات سمير عياد</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="tech"><img src="client_mas_academy.jpg" alt="MAS Academy" class="brand-img"> <span>MAS Academy</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="tech"><img src="client_iit.jpg" alt="IIT Institute" class="brand-img"> <span>IIT Institute</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="tech"><img src="client_hosein_laptop.jpg" alt="Al Hosein Laptop" class="brand-img"> <span>الحسين لاب توب</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="tech"><img src="client_bab_rezk.jpg" alt="Bab Rezk" class="brand-img"> <span>باب رزق</span></div>
+          <div class="brand-item brand-logo-pill" data-sector="food"><img src="client_sahari.png" alt="Sahari" class="brand-img"> <span>Sahari Food</span></div>
         </div>
       </div>
     </section>
