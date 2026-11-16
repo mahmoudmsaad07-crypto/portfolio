@@ -397,11 +397,17 @@ document.addEventListener('DOMContentLoaded', () => {
         item.classList.add('open');
         const color = item.getAttribute('data-color');
         if (servicesSection && color) {
-          servicesSection.style.backgroundColor = color;
+          const isDark = document.body.classList.contains('dark-mode');
+          if (!isDark) {
+            servicesSection.style.backgroundColor = color;
+          } else {
+            servicesSection.style.backgroundColor = 'var(--navy-dark)';
+          }
         }
       } else {
         if (servicesSection) {
-          servicesSection.style.backgroundColor = 'var(--cream)';
+          const isDark = document.body.classList.contains('dark-mode');
+          servicesSection.style.backgroundColor = isDark ? 'var(--navy-dark)' : 'var(--cream)';
         }
       }
     });

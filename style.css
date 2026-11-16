@@ -1868,55 +1868,200 @@ html[dir="rtl"] .modal-close {
 /* 18. New Features: Theme Toggle, Brands Marquee, Compare, Inquiry, Reels
    ========================================================================== */
 
-/* Dark Mode Overrides */
+/* Dark Mode Overrides (Ultra-Luxe OLED Deep Indigo & Neon Contrast) */
 body.dark-mode {
-  --cream: #0c1222;
-  --navy: #f1f5f9;
-  --navy-card: #151e33;
-  --navy-dark: #070b14;
+  --cream: #090D16;
+  --navy: #F8FAFC;
+  --navy-card: #111827;
+  --navy-dark: #060911;
+  background-color: var(--cream);
+  color: #F8FAFC;
 }
 
 body.dark-mode .nav {
-  background: rgba(12, 18, 34, 0.94);
+  background: rgba(9, 13, 22, 0.92);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-body.dark-mode .nav-item {
-  color: #f1f5f9;
+body.dark-mode .brand-text {
+  color: #F8FAFC;
 }
 
-body.dark-mode .sec-title.dark-text,
-body.dark-mode .sec-desc.dark-text,
-body.dark-mode .faq-q-text,
-body.dark-mode .faq-icon,
-body.dark-mode .faq-answer p,
-body.dark-mode .svc-num,
-body.dark-mode .svc-title,
-body.dark-mode .svc-text,
-body.dark-mode .plus {
-  color: #f1f5f9;
+body.dark-mode .nav-links {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .nav-item {
+  color: #E2E8F0;
+}
+
+body.dark-mode .nav-item.active {
+  color: #0F172A;
+}
+
+body.dark-mode .hero-section {
+  background: radial-gradient(circle at 80% 20%, rgba(224, 244, 121, 0.05) 0%, transparent 60%);
+}
+
+body.dark-mode .hero-title {
+  color: #FFFFFF;
+}
+
+body.dark-mode .hero-sub {
+  color: #94A3B8;
+}
+
+body.dark-mode .hero-bio {
+  color: #CBD5E1;
+}
+
+body.dark-mode .hand-note {
+  color: var(--lime);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .stat-box .stat-num {
+  color: var(--lime);
+}
+
+body.dark-mode .stat-box .stat-lbl {
+  color: #94A3B8;
+}
+
+body.dark-mode .hero-stats {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .btn-secondary {
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #F8FAFC;
+}
+
+body.dark-mode .btn-secondary:hover {
+  background: #F8FAFC;
+  color: #090D16;
+}
+
+body.dark-mode .services-section {
+  background-color: #090D16 !important;
+}
+
+body.dark-mode .tools-section {
+  background-color: #0E1626 !important;
+}
+
+body.dark-mode .faq-section {
+  background-color: #090D16 !important;
+}
+
+body.dark-mode .process-section {
+  background-color: #0C1220 !important;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .sec-title.dark-text {
+  color: #FFFFFF !important;
+}
+
+body.dark-mode .sec-desc.dark-text {
+  color: #94A3B8 !important;
 }
 
 body.dark-mode .services-accordion,
-body.dark-mode .svc,
-body.dark-mode .faq-list,
-body.dark-mode .faq-item {
-  border-color: rgba(255, 255, 255, 0.15);
-}
-
-body.dark-mode .tool-card {
-  background: #151e33;
-  color: #f1f5f9;
+body.dark-mode .svc {
   border-color: rgba(255, 255, 255, 0.12);
 }
 
-body.dark-mode .tool-title,
-body.dark-mode .tool-items strong {
-  color: #f1f5f9;
+body.dark-mode .svc-num {
+  color: var(--lime);
+}
+
+body.dark-mode .svc-title {
+  color: #F8FAFC;
+}
+
+body.dark-mode .plus {
+  color: var(--lime);
+}
+
+body.dark-mode .svc-text {
+  color: #CBD5E1;
+}
+
+body.dark-mode .chip {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(224, 244, 121, 0.3);
+  color: var(--lime);
+}
+
+body.dark-mode .tool-card {
+  background: #111827;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .tool-card:hover {
+  background: var(--lime) !important;
+  color: #0F172A !important;
+  border-color: var(--lime);
+}
+
+body.dark-mode .tool-card:hover .tool-title,
+body.dark-mode .tool-card:hover strong,
+body.dark-mode .tool-card:hover li,
+body.dark-mode .tool-card:hover .tool-num {
+  color: #0F172A !important;
+}
+
+body.dark-mode .tool-title {
+  color: #FFFFFF;
 }
 
 body.dark-mode .tool-items li {
-  color: rgba(241, 245, 249, 0.8);
+  color: #CBD5E1;
+}
+
+body.dark-mode .tool-items strong {
+  color: var(--lime);
+}
+
+body.dark-mode .tool-num {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .faq-list,
+body.dark-mode .faq-item {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-mode .faq-q-text {
+  color: #F8FAFC;
+}
+
+body.dark-mode .faq-icon {
+  color: var(--lime);
+}
+
+body.dark-mode .faq-answer p {
+  color: #CBD5E1;
+}
+
+body.dark-mode .spin-text {
+  fill: #F8FAFC;
+}
+
+body.dark-mode .card {
+  background: #111827;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-mode .card-info {
+  background: #111827;
+}
+
+body.dark-mode .review-card {
+  background: #111827;
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Theme Button */
