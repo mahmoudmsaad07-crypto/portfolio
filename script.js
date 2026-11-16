@@ -600,9 +600,21 @@ document.addEventListener('DOMContentLoaded', () => {
   openCaseStudy = function(card) {
     originalOpenCaseStudy(card);
     const videoWrap = document.getElementById('modal-video-wrap');
+    const proofWrap = document.getElementById('modal-proof-wrap');
+    const proofImg = document.getElementById('modal-proof-img');
+    const proofSrc = card.getAttribute('data-proof-img');
     const reelTitle = card.getAttribute('data-reel-title');
     const reelDesc = card.getAttribute('data-reel-desc');
     const mockText = document.getElementById('mock-reel-text');
+
+    if (proofWrap && proofImg) {
+      if (proofSrc) {
+        proofImg.src = proofSrc;
+        proofWrap.style.display = 'block';
+      } else {
+        proofWrap.style.display = 'none';
+      }
+    }
 
     if (videoWrap) {
       if (reelTitle) {
